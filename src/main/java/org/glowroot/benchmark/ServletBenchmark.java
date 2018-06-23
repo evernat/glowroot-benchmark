@@ -34,8 +34,10 @@ import org.openjdk.jmh.annotations.TearDown;
 @BenchmarkMode(Mode.SampleTime)
 @OutputTimeUnit(TimeUnit.MICROSECONDS)
 @State(Scope.Thread)
-@Fork(100)
+@Fork(ServletBenchmark.FORKS)
 public class ServletBenchmark {
+	
+	static final int FORKS = 3;
 
     static {
         try {

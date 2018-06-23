@@ -3,18 +3,13 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.glowroot</groupId>
-  <artifactId>glowroot-benchmark</artifactId>
+  <groupId>net.bull.javamelody</groupId>
+  <artifactId>javamelody-benchmark</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>Glowroot Benchmark</name>
-  <description>Glowroot Benchmark</description>
-  <url>https://github.com/glowroot/glowroot-benchmark</url>
-  <inceptionYear>2015</inceptionYear>
-  <organization>
-    <name>Glowroot contributors</name>
-    <url>https://github.com/glowroot</url>
-  </organization>
+  <name>javamelody Benchmark</name>
+  <description>javamelody Benchmark</description>
+  <url>https://github.com/javamelody/javamelody-benchmark</url>
   <licenses>
     <license>
       <name>The Apache Software License, Version 2.0</name>
@@ -24,6 +19,11 @@
   </licenses>
 
   <dependencies>
+    <dependency>
+      <groupId>net.bull.javamelody</groupId>
+      <artifactId>javamelody-core</artifactId>
+      <version>1.73.0</version>
+    </dependency>
     <dependency>
       <groupId>io.dropwizard</groupId>
       <artifactId>dropwizard-core</artifactId>

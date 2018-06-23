@@ -17,5 +17,5 @@ package org.glowroot.benchmark;
 
 import org.openjdk.jmh.annotations.Fork;
 
-@Fork(jvmArgsPrepend = "-javaagent:glowroot/glowroot.jar")
+@Fork(value = ServletBenchmark.FORKS, jvmArgsPrepend = "-javaagent:glowroot/glowroot.jar")
 public class ServletWithGlowrootBenchmark extends ServletBenchmark {}
