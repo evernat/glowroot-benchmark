@@ -18,7 +18,6 @@ package org.glowroot.benchmark;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import com.example.helloworld.HelloWorldApplication;
 import org.asynchttpclient.AsyncHttpClient;
 import org.asynchttpclient.DefaultAsyncHttpClient;
 import org.openjdk.jmh.annotations.Benchmark;
@@ -31,6 +30,8 @@ import org.openjdk.jmh.annotations.Setup;
 import org.openjdk.jmh.annotations.State;
 import org.openjdk.jmh.annotations.TearDown;
 
+import com.example.helloworld.HelloJavaMelodyApplication;
+
 @BenchmarkMode(Mode.SampleTime)
 @OutputTimeUnit(TimeUnit.MICROSECONDS)
 @State(Scope.Thread)
@@ -39,7 +40,7 @@ public class ServletWithJavaMelodyBenchmark {
 
     static {
         try {
-            HelloWorldApplication.main(new String[] {"server", "example.yml"});
+            HelloJavaMelodyApplication.main(new String[] {"server", "example.yml"});
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
